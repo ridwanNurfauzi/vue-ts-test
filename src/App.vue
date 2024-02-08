@@ -1,9 +1,11 @@
 <template>
-  <div>
-    <Navbar></Navbar>
-  </div>
-  <div>
-    <RouterView></RouterView>
+  <div class="min-h-screen min-w-full flex flex-col">
+    <div class="bg-white sticky top-0">
+      <Navbar></Navbar>
+    </div>
+    <div class="flex-1 flex flex-col">
+      <RouterView></RouterView>
+    </div>
   </div>
 </template>
 
@@ -17,6 +19,5 @@ export default {
   }
 }
 </script>
-
 
 <style scoped></style>

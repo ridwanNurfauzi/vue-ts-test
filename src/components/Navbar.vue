@@ -1,10 +1,11 @@
 <template>
-    <div>
+    <div class="bg-white text-center">
         <nav>
             <div>
                 <RouterLink to="/">Home</RouterLink>
                 <RouterLink to="/about">About</RouterLink>
                 <RouterLink to="/product">Product</RouterLink>
+                <RouterLink to="/login">Login</RouterLink>
             </div>
         </nav>
     </div>
