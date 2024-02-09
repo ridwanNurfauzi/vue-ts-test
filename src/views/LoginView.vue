@@ -7,7 +7,7 @@
                     <h1 class="text-center text-2xl font-semibold">Login Pengguna</h1>
                 </div>
                 <div class="my-2">
-                    <form action="" method="post">
+                    <form method="post">
                         <div class="flex flex-col my-5">
                             <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Email</label>
                             <input type="email" name="email" id="email"
@@ -27,7 +27,7 @@
                             <div class="ms-auto">
                                 <input type="reset" value="Reset"
                                     class="focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2" />
-                                <input type="submit" value="Masuk"
+                                <input type="button" value="Masuk" @click="_login()"
                                     class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2" />
                             </div>
                         </div>
@@ -37,3 +37,19 @@
         </div>
     </div>
 </template>
+
+<script lang="ts">
+import { mapActions } from "pinia";
+import { useAuthStore } from "@/stores/auth";
+
+export default {
+    methods: {
+        ...mapActions(useAuthStore, ['login']),
+
+        async _login() {
+            const fData = new FormData(document.forms[0]);
+            console.log(await this.login(fData));
+        }
+    }
+}
+</script>
