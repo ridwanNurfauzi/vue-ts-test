@@ -1,9 +1,9 @@
 <template>
-    <div class="flex-1 flex flex-col bg-[url('/images/bg1.jpg')] bg-cover">
+    <div class="flex-1 flex flex-col bg-[url('/images/bg1.jpg')] bg-cover bg-center">
         <div
             class="m-0 my-auto sm:mx-auto sm:w-[540px] flex-grow sm:flex-grow-0 flex flex-col bg-gray-50 bg-opacity-[.65] p-8 sm:rounded-xl shadow-lg backdrop-blur-sm">
             <div class="flex flex-col my-auto">
-                <div class="mt-2">
+                <div>
                     <h1 class="text-center text-2xl font-semibold">Login Pengguna</h1>
                 </div>
                 <div class="my-2">
